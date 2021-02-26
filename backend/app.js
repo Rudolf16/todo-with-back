@@ -15,6 +15,7 @@ const runServer= async()=>{
 
 
 app.use(cors())
+app.use(express.json())
 try {
     runServer()
 } catch (error) {
