@@ -24,9 +24,9 @@ module.exports.postTodo = async (req, res) => {
 
 module.exports.deleteTodo = async (req, res) => {
     try {
-        const{id}=req.body
+        const { id } = req.body
         await Todo.findByIdAndDelete(id)
-        res.json({message:"Todo deleted syccesfully"})
+        res.json({ message: "Todo deleted syccesfully" })
     } catch (error) {
         console.log("Todo deleted")
         console.log(error)
